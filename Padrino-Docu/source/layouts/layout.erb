@@ -14,7 +14,6 @@
 </head>
 
 <body class="<%= page_classes %>">
-
 <div style="float: left; display: block;">
   <ul id="navlist" style="list-style-type: none">
     <li><a href="/index.html">Back Home</a></li>
@@ -28,6 +27,8 @@
   <% end %>
   </ul>
 </div>
-<div style="float: righ;">  <%= yield %> </div>
+<div style="float: right;"><%= partial "header" %></div>
+<div style="float: right;"><%= yield %> </div>
+<div style="float: right;"><%= partial "footer" %></div>
 </body>
 </html>
