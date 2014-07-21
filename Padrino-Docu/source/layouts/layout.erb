@@ -17,14 +17,14 @@
 
 <div style="float: left; display: block;">
   <ul id="navlist" style="list-style-type: none">
-    <a href="/index.html">Back Home</a><br />
+    <li><a href="/index.html">Back Home</a></li>
     <% require 'pathname' %>
     <% guides = [] %>
     <% sitemap.resources.each do |r| %>
       <%guides << r if r.ext == ".html"%>
   <% end %>
     <% guides.each do |g| %> 
-      <a href="<%= g.url %>"><%= Pathname.new(g.destination_path).basename %></a><br />
+      <li><a href="<%= g.url %>"><%= Pathname.new(g.destination_path).basename %></a></li>
   <% end %>
   </ul>
 </div>
