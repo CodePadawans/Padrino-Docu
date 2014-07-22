@@ -22,8 +22,8 @@
     <% sitemap.resources.each do |r| %>
       <%guides << r if r.ext == ".html"%>
   <% end %>
-    <% guides.each do |g| %> 
-      <li><a href="<%= g.url %>"><%= Pathname.new(g.destination_path).basename %></a></li>
+    <% guides.each do |g| %>
+      <li><a href="<%= g.url %>"><%= Pathname.new(g.destination_path).basename(".*") %></a></li>
   <% end %>
   </ul>
 </div>
