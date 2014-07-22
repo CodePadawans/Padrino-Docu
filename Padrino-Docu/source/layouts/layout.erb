@@ -14,8 +14,8 @@
 </head>
 
 <body class="<%= page_classes %>">
-<div style="float: left; display: block;">
-  <ul id="navlist" style="list-style-type: none">
+<div style="width: 300px; float: left; margin-right: 20px;">
+  <ul id="navlist"; style="list-style-type: none; text-align: left">
     <li><a href="/index.html">Back Home</a></li>
     <% require 'pathname' %>
     <% guides = [] %>
@@ -28,7 +28,7 @@
   </ul>
 </div>
 <div style="float: right;"><%= partial "header" %></div>
-<div style="float: right;"><%= yield %> </div>
+<div style="width: 800px; float: left; margin-right: 20; text-align: left "><%= yield %> </div>
 <div style="float: right;"><%= partial "footer" %></div>
 </body>
 </html>
